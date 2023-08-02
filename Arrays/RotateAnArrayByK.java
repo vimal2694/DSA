@@ -1,7 +1,5 @@
 package Arrays;
 
-import java.util.Arrays;
-
 public class RotateAnArrayByK {
 	
 //	public static void rotateArrayByK(int arr[], int k) {
