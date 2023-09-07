@@ -20,14 +20,21 @@ public class LongestSubArrayGivenSum {
 				int len = i- hashMap.get(rem);
 				maxLen = Math.max(maxLen, len);
 			}
-			hashMap.put(sum,i);
+			
+			// for edge case {2,0,0,3}
+			if(!hashMap.containsKey(sum)) {
+				hashMap.put(sum, i);
+			}
+			
+			// else 
+			// hashMap.put(sum, i);
 		}
 		return maxLen;
 		
 	}
 
 	public static void main(String[] args) {
-		int arr[]  = {1,2,3,1,1,1,1,4,2,3};
+		int arr[]  = {2,0,0,3};
 		int length = longestSubArrayGivenSum(arr, 3);
 		System.out.println(length);
 	}
