@@ -18,7 +18,7 @@ import java.util.HashMap;
  */
 
 
-
+ // TC - O(n);  SC - O(n)
 public class LongestSubArrayGivenSum {
 	
 	public static int longestSubArrayGivenSum(int arr[], int k) {
