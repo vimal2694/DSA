@@ -20,7 +20,7 @@ import java.util.HashMap;
 
  // TC - O(n);  SC - O(n)  
 // works for +ve's, -ve's and 0's
-public class LongestSubArrayGivenSum {
+public class LongestSubArrayGivenSumForAllNums {
 	
 	public static int longestSubArrayGivenSum(int arr[], int k) {
 		
@@ -53,7 +53,7 @@ public class LongestSubArrayGivenSum {
 
 	public static void main(String[] args) {
 		int arr[]  = {2,0,0,3};
-		int length = longestSubArrayGivenSum(arr, 3);
+		int length = longestSubArrayGivenSum(arr, 0);
 		System.out.println(length);
 	}
 
