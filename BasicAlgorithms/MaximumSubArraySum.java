@@ -10,6 +10,7 @@ package BasicAlgorithms;
 
 
 // TC-> O(n) ;; SC -> O(1)
+//Kadane's Algo
 public class MaximumSubArraySum {
 	
 	public static int maxSubArraySum(int arr[]) {
