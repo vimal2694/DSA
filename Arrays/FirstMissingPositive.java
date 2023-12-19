@@ -31,29 +31,29 @@ public class FirstMissingPositive {
 	}
 	 */
 	
-	//M-2
-	
+	//M-2 Optimized
+	//TC -> O(2N) ; SC -> O(1)
 	public static int missingInteger(int arr[]) {
-		int i=0, j=0;
+		int i=0;
 		while(i< arr.length) {
-			if(arr[i]>0 && arr[i]< arr.length+1 && arr[i]!=arr[i+1]) {
-				swap(arr[i],arr[j]);
-				if(arr[i]==i+1) {
-					return i+1;
-				}
-				j++;
+			if(arr[i]>0 && arr[i]< arr.length+1 && arr[i]!=arr[arr[i]-1]) {
+				int j = arr[i]-1;
+				int x = arr[i];
+				
+				//swap with x
+				arr[i] = arr[j];
+				arr[j] = x;
+			} else {
+				i++;
 			}
-		
-			i++;
 		}
 		
-		return 0;
-	}
-
-	private static void swap(int i, int j) {
-		int temp = i;
-		i=j;
-		j=temp;
+		for(i=0; i< arr.length;i++) {
+			if(arr[i]!=i+1) {
+				return i+1;
+			}
+		}
+		return arr.length+1;
 	}
 
 	public static void main(String[] args) {
