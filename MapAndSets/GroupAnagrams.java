@@ -7,7 +7,11 @@ import java.util.List;
 
 public class GroupAnagrams {
 	
-	
+	/*
+	 * sorting a string of length k = kLogK
+	 * which is repeated for n times
+	 * so TC-> O(N(klogK)x) 
+	 */
 	public static List<List<String>> groupAnagrams(List<String> inputStr) {
     	HashMap<String, ArrayList<String>> hashMap = new HashMap<>();
 		List<List<String>> list = new ArrayList<>();
@@ -34,6 +38,7 @@ public class GroupAnagrams {
 		return list;
     
 	}
+	
 
 	public static void main(String[] args) {
 		String[] arr = {"eat", "ate", "bat", "tan", "nat"};
